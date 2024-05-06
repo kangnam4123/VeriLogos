@@ -1,0 +1,26 @@
+module filterH_6tap(A,B,C,D,E,F,H_need_round,raw_out,round_out);
+	input [7:0] A,B,C,D,E,F;
+	input H_need_round;
+	output [14:0] raw_out; 	
+	output [7:0]  round_out;
+	wire [8:0] sum_AF;
+	wire [8:0] sum_BE;
+	wire [8:0] sum_CD;
+	wire [10:0] sum_4CD;
+	wire [11:0] sum_1;
+	wire [12:0] sum_2;
+	wire [13:0] sum_3;
+	wire [14:0] sum_round;
+	wire [9:0] round_tmp;
+	assign sum_AF = A + F;
+	assign sum_BE = B + E;
+	assign sum_CD = C + D;
+	assign sum_4CD = {sum_CD,2'b0};
+	assign sum_1 = {1'b0,sum_4CD} + {3'b111,~sum_BE} + 1;
+	assign sum_2 = {4'b0,sum_AF} + {sum_1[11],sum_1};
+	assign sum_3 = {sum_1,2'b0};
+	assign raw_out = {{2{sum_2[12]}},sum_2} + {sum_3[13],sum_3};
+	assign sum_round = (H_need_round)? (raw_out + 16):0;
+	assign round_tmp = (H_need_round)? sum_round[14:5]:0;
+	assign round_out = (round_tmp[9])? 8'd0:((round_tmp[8])? 8'd255:round_tmp[7:0]);
+endmodule
