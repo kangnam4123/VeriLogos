@@ -1,0 +1,26 @@
+module JIS13NN(X, IT);
+input   X;
+output  IT;
+wire	ENC ;
+wire	tmg1m1n_out_ ;
+wire	bscn_xd0 ;
+wire	bscn_d0 ;
+wire	bscn_xd1 ;
+wire	bscn_d1 ;
+wire	tmg2m3n_x ;
+wire	out_buf_a ;
+wire	out_buf_b ;
+wire	out_buf_en ;
+  not		g1(ENC, 1'b1) ;
+  not		g2(tmg1m1n_out_, 1'b0) ;
+  and		g3(bscn_xd0, ENC, 1'b0) ;
+  or		g4(bscn_d0, 1'b1, tmg1m1n_out_) ;
+  or		g5(bscn_xd1, 1'b1, 1'b0) ;
+  and		g6(bscn_d1, ENC, tmg1m1n_out_) ;
+  not		g7(tmg2m3n_x, X) ;
+  not		g8(IT, tmg2m3n_x) ;
+  not		g9(out_buf_a, bscn_xd0) ;
+  not		g10(out_buf_b, bscn_xd1) ;
+  xor		g11(out_buf_en, out_buf_a, out_buf_b) ;
+  notif0	g12(X, out_buf_a, out_buf_en) ;
+endmodule

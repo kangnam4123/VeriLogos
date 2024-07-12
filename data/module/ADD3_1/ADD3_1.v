@@ -1,0 +1,21 @@
+module ADD3_1(X1, X2, X3, CIN, S, C, COUT);
+input   X1;
+input   X2;
+input   X3;
+input   CIN;
+output  S;
+output  C;
+output  COUT;
+xor g0(S, X1, X2, X3, CIN);
+not g1(w9, X3);
+or g2(w7, CIN, w9);
+and g3(w4, X1, X2, w7);
+not g4(w12, X1);
+xor g5(w13, X2, X3);
+and g6(w10, CIN, w12, w13);
+not g7(w19, X3);
+and g8(w16, CIN, X1, w19);
+or g9(C, w4, w10, w16);
+or g10(w20, X1, X2);
+and g11(COUT, w20, X3);
+endmodule

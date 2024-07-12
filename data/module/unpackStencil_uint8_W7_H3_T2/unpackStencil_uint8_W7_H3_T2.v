@@ -1,0 +1,22 @@
+module unpackStencil_uint8_W7_H3_T2(input CLK, input process_CE, input [191:0] inp, output [335:0] process_output);
+parameter INSTANCE_NAME="INST";
+  wire [7:0] unnamedcast4148USEDMULTIPLEcast;assign unnamedcast4148USEDMULTIPLEcast = ({inp[15:8]}); 
+  wire [7:0] unnamedcast4150USEDMULTIPLEcast;assign unnamedcast4150USEDMULTIPLEcast = ({inp[23:16]}); 
+  wire [7:0] unnamedcast4152USEDMULTIPLEcast;assign unnamedcast4152USEDMULTIPLEcast = ({inp[31:24]}); 
+  wire [7:0] unnamedcast4154USEDMULTIPLEcast;assign unnamedcast4154USEDMULTIPLEcast = ({inp[39:32]}); 
+  wire [7:0] unnamedcast4156USEDMULTIPLEcast;assign unnamedcast4156USEDMULTIPLEcast = ({inp[47:40]}); 
+  wire [7:0] unnamedcast4158USEDMULTIPLEcast;assign unnamedcast4158USEDMULTIPLEcast = ({inp[55:48]}); 
+  wire [7:0] unnamedcast4162USEDMULTIPLEcast;assign unnamedcast4162USEDMULTIPLEcast = ({inp[79:72]}); 
+  wire [7:0] unnamedcast4164USEDMULTIPLEcast;assign unnamedcast4164USEDMULTIPLEcast = ({inp[87:80]}); 
+  wire [7:0] unnamedcast4166USEDMULTIPLEcast;assign unnamedcast4166USEDMULTIPLEcast = ({inp[95:88]}); 
+  wire [7:0] unnamedcast4168USEDMULTIPLEcast;assign unnamedcast4168USEDMULTIPLEcast = ({inp[103:96]}); 
+  wire [7:0] unnamedcast4170USEDMULTIPLEcast;assign unnamedcast4170USEDMULTIPLEcast = ({inp[111:104]}); 
+  wire [7:0] unnamedcast4172USEDMULTIPLEcast;assign unnamedcast4172USEDMULTIPLEcast = ({inp[119:112]}); 
+  wire [7:0] unnamedcast4176USEDMULTIPLEcast;assign unnamedcast4176USEDMULTIPLEcast = ({inp[143:136]}); 
+  wire [7:0] unnamedcast4178USEDMULTIPLEcast;assign unnamedcast4178USEDMULTIPLEcast = ({inp[151:144]}); 
+  wire [7:0] unnamedcast4180USEDMULTIPLEcast;assign unnamedcast4180USEDMULTIPLEcast = ({inp[159:152]}); 
+  wire [7:0] unnamedcast4182USEDMULTIPLEcast;assign unnamedcast4182USEDMULTIPLEcast = ({inp[167:160]}); 
+  wire [7:0] unnamedcast4184USEDMULTIPLEcast;assign unnamedcast4184USEDMULTIPLEcast = ({inp[175:168]}); 
+  wire [7:0] unnamedcast4186USEDMULTIPLEcast;assign unnamedcast4186USEDMULTIPLEcast = ({inp[183:176]}); 
+  assign process_output = {{({inp[191:184]}),unnamedcast4186USEDMULTIPLEcast,unnamedcast4184USEDMULTIPLEcast,unnamedcast4182USEDMULTIPLEcast,unnamedcast4180USEDMULTIPLEcast,unnamedcast4178USEDMULTIPLEcast,unnamedcast4176USEDMULTIPLEcast,({inp[127:120]}),unnamedcast4172USEDMULTIPLEcast,unnamedcast4170USEDMULTIPLEcast,unnamedcast4168USEDMULTIPLEcast,unnamedcast4166USEDMULTIPLEcast,unnamedcast4164USEDMULTIPLEcast,unnamedcast4162USEDMULTIPLEcast,({inp[63:56]}),unnamedcast4158USEDMULTIPLEcast,unnamedcast4156USEDMULTIPLEcast,unnamedcast4154USEDMULTIPLEcast,unnamedcast4152USEDMULTIPLEcast,unnamedcast4150USEDMULTIPLEcast,unnamedcast4148USEDMULTIPLEcast},{unnamedcast4186USEDMULTIPLEcast,unnamedcast4184USEDMULTIPLEcast,unnamedcast4182USEDMULTIPLEcast,unnamedcast4180USEDMULTIPLEcast,unnamedcast4178USEDMULTIPLEcast,unnamedcast4176USEDMULTIPLEcast,({inp[135:128]}),unnamedcast4172USEDMULTIPLEcast,unnamedcast4170USEDMULTIPLEcast,unnamedcast4168USEDMULTIPLEcast,unnamedcast4166USEDMULTIPLEcast,unnamedcast4164USEDMULTIPLEcast,unnamedcast4162USEDMULTIPLEcast,({inp[71:64]}),unnamedcast4158USEDMULTIPLEcast,unnamedcast4156USEDMULTIPLEcast,unnamedcast4154USEDMULTIPLEcast,unnamedcast4152USEDMULTIPLEcast,unnamedcast4150USEDMULTIPLEcast,unnamedcast4148USEDMULTIPLEcast,({inp[7:0]})}};
+endmodule

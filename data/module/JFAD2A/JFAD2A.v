@@ -1,0 +1,24 @@
+module JFAD2A(A1, A2, B1, B2, CI, S1, S2, CO);
+input   A1;
+input   A2;
+input   B1;
+input   B2;
+input   CI;
+output  S1;
+output  S2;
+output  CO;
+xor g0(S1, A1, B1, CI);
+or g1(w6, A1, B1);
+and g2(w4, CI, w6);
+and g3(w9, A1, B1);
+or g4(w3, w4, w9);
+xor g5(S2, w3, A2, B2);
+and g6(w14, A2, B2);
+or g7(w18, A2, B2);
+and g8(w22, A1, B1);
+and g9(w25, A1, CI);
+and g10(w28, B1, CI);
+or g11(w21, w22, w25, w28);
+and g12(w17, w18, w21);
+or g13(CO, w14, w17);
+endmodule
