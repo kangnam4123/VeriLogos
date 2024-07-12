@@ -1,3 +1,3 @@
 😎 VeriLogos 😎
-A project to create Verilog RTL that is grammatically and functionally correct using LLM
+Verilog HDL Generation using Large Language Models with RL-based Fine-tuning
 
